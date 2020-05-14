@@ -28,14 +28,14 @@ app.get('', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.render('about.hbs', {
+  res.render('about', {
     title: 'About Me',
     name: 'Stanimir Todorov'
   });
 });
 
 app.get('/help', (req, res) => {
-  res.render('help.hbs', {
+  res.render('help', {
     helpText: 'This is some helpful text',
     title: 'Help',
     name: 'Stanimir Todorov'
@@ -83,7 +83,7 @@ app.get('/products', (req, res) => {
 })
 
 app.get('/help/*', (req, res) => {
-  res.render('404.hbs', {
+  res.render('404', {
     title: '404',
     name: 'Stanimir Todorov',
     errorMessage: 'Help article not found.'
@@ -91,7 +91,7 @@ app.get('/help/*', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.render('404.hbs', {
+  res.render('404', {
     title: '404',
     name: 'Stanimir Todorov',
     errorMessage: 'Page not found'
